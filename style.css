@@ -1,0 +1,51 @@
+
+#body {
+  background-color: #fff;
+ 
+}
+ 
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="text"],select,
+input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ 
+
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:8rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+#time{
+  margin: red;
+
+}
+#departments{
+  width: 85%;
+}

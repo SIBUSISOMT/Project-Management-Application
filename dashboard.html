@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard-style.css">
+</head>
+<body>
+  <header>
+    <h1>IUCMA Project manager</h1><br>
+    <ul id="departments">
+      <li>HR</li>
+      <li>IT</li>
+      <li>RPO</li>
+      <li>SCM</li>
+      <li>Records & Auxilliary</li>
+      <li>Office Of the CEO</li>
+      <li>RQM</li>
+      <li>Communications</li>
+      <li>Finance</li>
+      <li>I & P</li>
+      <li>CME</li>
+      <li>DIM</li>
+      <li>WUA</li>
+      <li>Internal Auditing</li>
+
+    </ul>
+  </header>
+  <div id="firstContainer">
+  <div id="time" >
+    
+  
+
+  <script >
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var day = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var timeString =  now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() ;
+      document.getElementById('time').innerHTML = timeString;
+
+      var timeString =  now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
+      document.getElementById('date').innerHTML = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+  </script></div>
+
+  <div id="date">
+    <script>
+      
+    </script>
+  </div>
+  
+  </div>
+
+  
+
+  <div class="container">
+    <h2>Create New Project</h2>
+    <form id="project-form">
+      <input type="text" id="project-name" placeholder="Project Name" required>
+      <input type="text" id="project-members" placeholder="Project Members (comma-separated)" required>
+      <h3>Enter project scope :</h3>
+
+       <textarea rows="4" cols="50" id="content"></textarea><br>
+
+       <h3>Select project team :</h3>
+
+      <div class="members">
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+
+       <div class="memberxs">
+
+    <button onclick="addCheckbox()" id="addButton">Add Checkbox</button>
+    <button onclick="deleteCheckedCheckboxes()" id="deleteButton">Delete Checked Checkboxes</button>
+    
+  </div>
+  
+
+
+
+  <br>
+  <!-- Add more checkbox options as needed -->
+
+      <button type="submit" id="submit">Create Project</button>
+    </form>
+  </div>
+    <div id="projects">
+  <h2>Projects</h2>
+  <!-- Each project will have its own project-list -->
+</div>
+       
+       <div id="activities">
+
+      <h2>Recent Activity</h2>
+    <ul id="activity-list">
+      <!-- Recent activity will be dynamically populated here -->
+    </ul>
+
+    </div>
+   
+
+    
+  
+
+  <script src="dashboard-script.js"></script>
+</body>
+</html>
