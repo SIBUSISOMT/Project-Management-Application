@@ -62,13 +62,19 @@
   <div class="container">
     <h2>Create New Project</h2>
     <form id="project-form">
-      <input type="text" id="project-name" placeholder="Project Name" required>
-      <input type="text" id="project-members" placeholder="Project Members (comma-separated)" required>
+      <input type="text" id="project-name" placeholder="Project Name" required >
+      <input type="text" id="project-members" placeholder="Enter service provider name" required>
+      <div>
+         
+      <div id="duration"><p >Start date :</p>   <p id="end">End date :</p></div>
+        <input type="date" id="dates" placeholder="Enter service provider name" reqduired >
+        <input type="date" id="dates" placeholder="Enter service provider name" style="margin-left: 2rem;" reqduired>
+      </div>
       <h3>Enter project scope :</h3>
 
-       <textarea rows="4" cols="50" id="content"></textarea><br>
+       <textarea rows="4" cols="50" id="content" requidred></textarea><br>
 
-       <h3>Select project team :</h3>
+       <h3>Add project team :</h3>
 
       <div class="members">
        <ul>
@@ -76,26 +82,24 @@
        </ul>
       </div>
 
-       <div class="memberxs">
-
-    <button onclick="addCheckbox()" id="addButton">Add Checkbox</button>
-    <button onclick="deleteCheckedCheckboxes()" id="deleteButton">Delete Checked Checkboxes</button>
-    
-  </div>
-  
-
-
+      
+  <div class="members">
+  <input type="text" id="nameInput" placeholder="Enter a name">
+  <button onclick="addName()">Add Name</button>
+  <ul id="nameList"></ul>
+</div>
 
   <br>
   <!-- Add more checkbox options as needed -->
 
       <button type="submit" id="submit">Create Project</button>
-    </form>
-  </div>
+    </form></div>
+    
     <div id="projects">
-  <h2>Projects</h2>
+      <h2>Projects</h2>
   <!-- Each project will have its own project-list -->
 </div>
+
        
        <div id="activities">
 
