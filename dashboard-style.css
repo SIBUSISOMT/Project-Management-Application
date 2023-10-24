@@ -27,6 +27,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 2rem ;
+  /* width: 3rem; */
   
 }
 #activities{
@@ -37,11 +38,8 @@ header {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 2rem ;
-  
-
+  margin-bottom: 5rem;
 }
-
-
 input[type="text"] {
   width: 90%;
   padding: 10px;
@@ -61,7 +59,7 @@ input[type="text"] {
   margin-top:2rem ;
 }
 
-button:hover {
+#submit:hover {
   background-color: #1f3c7b;
 }
 
@@ -115,6 +113,14 @@ li {
 #end{
   margin-right: 45.5rem;
   
+}
+.reviewContainer{
+  margin-left: 4rem;
+  margin-right: 40rem;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
  
 

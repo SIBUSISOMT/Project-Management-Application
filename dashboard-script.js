@@ -18,13 +18,16 @@ function renderProjects() {
   var projectContainer = document.getElementById("projects");
   projectContainer.innerHTML = ""; // Clear the existing project lists
   
+  // Add the project header
+  var projectHeader = document.createElement("h2");
+  projectHeader.textContent = "Projects";
+  projectContainer.appendChild(projectHeader);
+  
   projects.forEach(function (project) {
     var projectList = document.createElement("ul");
     projectList.classList.add("project-list"); // Add a class to style each project list
-    
     var listItem = document.createElement("li");
     listItem.textContent = project.name + " - ";
-    
     // Create radio buttons for status selection
     var notStartedRadio = document.createElement("input");
     notStartedRadio.type = "radio";
@@ -33,7 +36,6 @@ function renderProjects() {
     notStartedRadio.addEventListener("click", function() {
       project.status = "Not started";
     });
-    
     var inProgressRadio = document.createElement("input");
     inProgressRadio.type = "radio";
     inProgressRadio.name = project.name;
@@ -41,7 +43,6 @@ function renderProjects() {
     inProgressRadio.addEventListener("click", function() {
       project.status = "In-progress";
     });
-    
     var completeRadio = document.createElement("input");
     completeRadio.type = "radio";
     completeRadio.name = project.name;
@@ -49,25 +50,16 @@ function renderProjects() {
     completeRadio.addEventListener("click", function() {
       project.status = "Complete";
     });
-    
     listItem.appendChild(notStartedRadio);
     listItem.appendChild(document.createTextNode("Not started"));
-    
     listItem.appendChild(inProgressRadio);
     listItem.appendChild(document.createTextNode("In-progress"));
-    
     listItem.appendChild(completeRadio);
     listItem.appendChild(document.createTextNode("Complete"));
-    
     projectList.appendChild(listItem);
     projectContainer.appendChild(projectList);
   });
 }
-
-
-
-
-
 // Add recent activity
 function addActivity(member, change) {
   var activityList = document.getElementById("activity-list");
@@ -81,16 +73,14 @@ function addActivity(member, change) {
 
 // Handle project form submission
 document.getElementById("project-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault(); // Prevent form submission 
   var projectName = document.getElementById("project-name").value;
   var projectMembers = document.getElementById("project-members").value;
   addProject(projectName, projectMembers);
   renderProjects();
-  addActivity("Admin", "Created project: " + projectName);
+  addActivity("Admin", " Created project: " + projectName);
   
 });
-
-// Simulate project status update
  
 
 // Adding and deleting members in a project
@@ -112,5 +102,60 @@ function addName() {
     nameInput.value = '';
   }
 }
+ 
+function toHr(){
+  window.location.href="humanResource.html";
+}
+function toIt(){
+  window.location.href="IT.html";
+}
+function toRPo(){
+  window.location.href="RPO.html";
+}
+function toSCm(){
+  window.location.href="SCM.html"; 
+}
+function toRecords(){
+  window.location.href="Records.html";
+}
+function toCeo(){
+  window.location.href="officeOfTheCEO.html";
+}
+function toRQm(){
+  window.location.href="RQM.html";
+}
+function toCommunications(){
+  window.location.href="communications.html";
+}
+function toFinance(){
+  window.location.href="finance.html";
+}
+function toIP(){
+  window.location.href="institution&Participation.html";
+}
+function toCMe(){
+  window.location.href="CME.html";
+}
+function toDIm(){
+  window.location.href="DIM.html";
+}
+function toWUa(){
+  window.location.href="WUA.html";
+}
+function toIa(){
+  window.location.href="InternalAuditing.html";
+}
 
+// arrangements of dates
+const startDate = document.getElementById('startDate');
+const endDate = document.getElementById('endDate');
+
+endDate.addEventListener('change', () => {
+  if (startDate.value < endDate.value) {
+    
+  }else{
+    alert('Start date cannot be equal to or later than the end date. Please choose a valid date range.');
+    endDate.value = '';
+  }
+});
 

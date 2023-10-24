@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dashboard-style.css">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var day = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var timeString = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+      document.getElementById('livetime').innerHTML = timeString;
+      var dateString = now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
+      document.getElementById('liveDate').innerHTML = dateString;
+    }
+    setInterval(updateTime, 1000);
+
+
+
+    
+  </script>
+   <div class="reviewContainer" style="margin-top: 3rem;">
+    <p>Project review for: <span id="liveDate" style="color: black;"></span></p>
+  </div>
+
+
+
+
+</body>
+</html>

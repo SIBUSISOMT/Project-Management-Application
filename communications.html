@@ -9,28 +9,12 @@
   <header>
     <h1>IUCMA Project manager</h1><br>
     <ul id="departments">
-      <li onclick="toHr()">HR</li>
-      <li onclick="toIt()">IT</li>
-      <li onclick="toRPo()">RPO</li>
-      <li onclick="toSCm()">SCM</li>
-      <li onclick="toRecords()">Records & Auxilliary</li>
-      <li onclick="toCeo()">Office Of the CEO</li>
-      <li onclick="toRQm()">RQM</li>
-      <li onclick="toCommunications()">Communications</li>
-      <li onclick="toFinance()">Finance</li>
-      <li onclick="toIP()">I & P</li>
-      <li onclick="toCMe()">CME</li>
-      <li onclick="toDIm()">DIM</li>
-      <li onclick="toWUa()">WUA</li>
-      <li onclick="toIa()">Internal Auditing</li>
-
+      <p style="font-size: larger;">Communications Department</p>
     </ul>
   </header>
   <div id="firstContainer">
-  <div id="time" >
+  <div id="time">
     
-  
-
   <script >
     function updateTime() {
       var now = new Date();
@@ -67,8 +51,8 @@
       <div>
          
       <div id="duration"><p >Start date :</p>   <p id="end">End date :</p></div>
-        <input type="date" id="startDate" placeholder="Enter service provider name" required >
-        <input type="date" id="endDate" placeholder="Enter service provider name" style="margin-left: 2rem;" required>
+        <input type="date" id="dates" placeholder="Enter service provider name" required >
+        <input type="date" id="dates" placeholder="Enter service provider name" style="margin-left: 2rem;" required>
       </div>
       <h3>Enter project scope :</h3>
 
@@ -80,22 +64,7 @@
        <ul>
         <li></li>
        </ul>
-      </div><br>
-      <h3> Select Status : </h3>
-      <select id="departments" required>
-        <option value="option1">Select Department</option>
-        <option value="option2">Human Resource</option>
-        <option value="option3">Information Technology</option>
-        <option value="option4">Resource Planning Operations</option>
-        <option value="option5">Supply Chain Management</option>
-        <option value="option6">Records & Auxilliary</option>
-        <option value="option7">Office Of the CEO</option>
-        <option value="option8">Resource Quality Management</option>
-        <option value="option9">Communications</option>
-        <option value="option10">Finance</option>
-        <option value="option11">Institutions & Participations</option>
-        <option value="option11">Internal Auditing</option>
-        </select>
+      </div>
 
       
   <div class="members">
@@ -113,7 +82,7 @@
     <div id="projects">
       <h2>Projects</h2>
 
-      <ul class="project-list">
+      <ul>
         <li></li>
       </ul>
   <!-- Each project will have its own project-list -->
