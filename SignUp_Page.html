@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login & Registration</title>
+	<link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+	<div class="container">
+		<div id="LoginAndRegistrationForm">
+			<h1 id="formTitle">Login</h1>
+			<div id="formSwitchBtn">
+
+        <button onclick="ShowRegistrationForm()"  id="ShowRegistrationBtn">Register</button>
+				<button onclick="ShowLoginForm()"  id="ShowLoginBtn" class="active">Login</button>
+				
+			</div>
+			<div id="LoginFrom">
+				
+			</div>
+			<div id="RegistrationFrom">
+				<form action="#">
+					<div class="center">
+						<input id="RegiName" class="input-text" type="text" placeholder="Username">
+						<input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
+						<input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
+						<input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
+					</div>
+					<div class="center mt-20">
+						<input onclick="return ValidateRegistrationForm();" class="Submit-Btn" type="submit" value="Register" id="RegistrationitBtn">
+					</div>
+				</form>
+		
+			</div>
+		
+		</div>
+	
+	</div>
+
+	<script src="SignUp.js"></script>
+	
+</body>
+</html>

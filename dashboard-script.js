@@ -2,15 +2,13 @@
 var projects = [];
 
 // Add project to the list
-function addProject(name, members) {
+function addProject(name) {
   var project = {
     name: name,
-    members: members.split(","),
-    status: "Not Started"
   };
 
   projects.push(project);
-}
+} 
 
 
 // Render project list
@@ -76,11 +74,16 @@ document.getElementById("project-form").addEventListener("submit", function(even
   event.preventDefault(); // Prevent form submission 
   var projectName = document.getElementById("project-name").value;
   var projectMembers = document.getElementById("project-members").value;
+  var username = document.getElementById("username");
   addProject(projectName, projectMembers);
   renderProjects();
-  addActivity("Admin", " Created project: " + projectName);
-  
-});
+  addActivity(username.value, " Created project: " + projectName);
+ 
+   projectName= '';
+  projectMembers= '';
+}
+
+);
  
 
 // Adding and deleting members in a project

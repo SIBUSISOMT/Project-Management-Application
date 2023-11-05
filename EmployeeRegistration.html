@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IUCMA Project manager</title>
+  <link rel="stylesheet" type="text/css" href="EmployeeRegistration.css">
+  <link rel="stylesheet" type="text/css" href="dashboard-style.css">
+</head>
+<body>
+  <header>
+    <h1>IUCMA Project manager</h1><br>
+    <ul id="departments">
+      <p style="font-size: larger;">Admin Panel</p>
+    </ul>
+    <button onclick="dashboard()" id="toDashboard"><< Dashboard </button>
+    
+  </header>
+  <div id="firstContainer">
+  <div id="time">
+    
+  <script >
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var day = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var timeString =  now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() ;
+      document.getElementById('time').innerHTML = timeString;
+    
+      var timeString =  now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
+      document.getElementById('date').innerHTML = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+  </div>
+
+  <div id="date">
+    <script>
+      
+    </script>
+  </div>
+  
+  </div>
+
+
+
+<div class="container">
+  <form id="employee-form">
+    <input type="text" id="name-input" placeholder="Name" required>
+    <input type="text" id="surname-input" placeholder="Surname" required>
+
+    <select id="division-select" required>
+        <option >Select Department</option>
+        <option >Human Resource</option>
+        <option >Information Technology</option>
+        <option >Resource Planning Operations</option>
+        <option >Supply Chain Management</option>
+        <option >Records & Auxilliary</option>
+        <option >Office Of the CEO</option>
+        <option >Resource Quality Management</option>
+        <option >Communications</option>
+        <option >Finance</option>
+        <option >Institutions & Participations</option>
+        <option >Internal Auditing</option>
+        </select>
+        
+    <input type="text" id="username-input" placeholder="Username" required>
+    <button type="submit">Add Employee</button>
+  </form>
+</div>
+
+<div id="projects">
+  <h2>Registered Employees</h2>
+  <table id="employee-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Division</th>
+        <th>Username</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="employee-list"></tbody>
+  </table>
+</div>
+
+
+
+
+  <script src="EmployeeRegistration.js"></script>
+</body>
+</html>
