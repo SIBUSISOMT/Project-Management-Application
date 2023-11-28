@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <title>IUCMA Project manager</title>
+  <link rel="stylesheet" type="text/css" href="MainUI_SubDivision.css">
+</head>
+<body>
+  <header>
+    <h1>IUCMA Project manager</h1><br>
+    
+  </header>
+  <div id="firstContainer">
+  <div id="time">
+    
+  <script >
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var day = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var timeString =  now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() ;
+      document.getElementById('time').innerHTML = timeString;
+
+      var timeString =  now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
+      document.getElementById('date').innerHTML = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+  </div>
+
+  <div id="date">
+   
+  </div>
+  
+  </div>
+
+<body>
+ 
+
+  <div class="content"> 
+    <div class="box">
+      <div class="SubDivision_Container" id="corporate_division">Communications & Intergovernmental Relations</div>
+      <div class="SubDivision_Container" id="finance_division">Information Technology</div>
+     
+   
+      <div class="SubDivision_Container" id="CEO_division">Human Resource Management</div>
+      <div class="SubDivision_Container" id="wrm_division">Legal Management</div>
+   
+   
+        <div class="SubDivision_Container" id="wrm_division">Records Management</div>
+    </div>
+  </div>
+</body>
+</html>

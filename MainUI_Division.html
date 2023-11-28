@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <title>IUCMA Project manager</title>
+  <link rel="stylesheet" type="text/css" href="MainUI_Division.css">
+</head>
+<body>
+  <header>
+    <h1>IUCMA Project manager</h1><br>
+    
+  </header>
+  <div id="firstContainer">
+  <div id="time">
+    
+  <script >
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var day = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var timeString =  now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() ;
+      document.getElementById('time').innerHTML = timeString;
+
+      var timeString =  now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
+      document.getElementById('date').innerHTML = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+  </div>
+
+  <div id="date">
+   
+  </div>
+  
+  </div>
+
+<body>
+ 
+
+  <div class="content">
+    <div class="row">
+      <div class="container" id="corporate_division">Corporate Services</div>
+      <div class="container" id="finance_division">Finance Department</div>
+     
+    </div>
+    <div class="row">
+      <div class="container" id="CEO_division">Office of the CEO</div>
+      <div class="container" id="wrm_division">Water Resource Management</div>
+   
+    </div>
+  </div>
+</body>
+</html>
